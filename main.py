@@ -37,6 +37,8 @@ class Desired_Grade_Calculator:
         self.lowest_final = lowest_final
     def calculator(self, name, Q1, Q2, Q3, Q4, desired_grade, lowest_final):
         if self.Q4 == 'E' and self.Q3 == 'E':
+            sheet.cell(row = student_index, column= 7).value = "Doesn't matter"
+            sheet.cell(row = student_index, column= 8).value = 'E'
             return "Sorry {}, because you failed the last 2 quarters, you automatically fail the course.".format(self.name)
         #REMINDER: YOU CAN ONLY RETURN ONCE
         # THIS USES THE HCPSS 8020 GRADING POLICY CODE WILL NOT WORK WITH OTHER POLICIES
