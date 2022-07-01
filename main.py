@@ -36,6 +36,7 @@ class Desired_Grade_Calculator:
         self.name = name
         self.lowest_final = lowest_final
     def calculator(self, name, Q1, Q2, Q3, Q4, desired_grade, lowest_final):
+        global student_index
         if self.Q4 == 'E' and self.Q3 == 'E':
             sheet.cell(row = student_index, column= 7).value = "Doesn't matter"
             sheet.cell(row = student_index, column= 8).value = 'E'
